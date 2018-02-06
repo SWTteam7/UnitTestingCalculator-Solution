@@ -27,18 +27,23 @@ namespace Calculator
         public double Power(double a, double b)
         {
             Accumulator = Math.Pow(a, b);
-           return Accumulator;
-        }
-
-        public double Divide(double divend, double divisor)
-        {
-            return divend / divisor;
-            
+           
             if (a < 0)
             {
                 throw new ArgumentException("False");
             }
-            return Math.Pow(a, b);
+            return Accumulator;
+        }
+
+        public double Divide(double divend, double divisor)
+        {
+            Accumulator = divend / divisor;
+
+            if (divisor == 0)
+            {
+                throw new ArgumentException("False");
+            }
+            return Accumulator;
         }
     }
 }
