@@ -21,6 +21,10 @@ namespace Calculator
 
         public double Power(double a, double b)
         {
+            if (a < 0)
+            {
+                throw new ArgumentException("False");
+            }
             return Math.Pow(a, b);
         }
     }

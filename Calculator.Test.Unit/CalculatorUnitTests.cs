@@ -62,5 +62,11 @@ namespace Calculator.Test.Unit
         {
             Assert.That(_uut.Power(x, exp), Is.EqualTo(result));
         }
+
+        [TestCase(-4, 5.7, "False")]
+        public void Power_RaiseNumbers_ResultIsWrong(double x, double exp, string result)
+        {
+            Assert.Throws(Is.TypeOf<ArgumentException>(), () => _uut.Power(x, exp));
+        }
     }
 }
