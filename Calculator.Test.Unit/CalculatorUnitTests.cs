@@ -116,5 +116,12 @@ namespace Calculator.Test.Unit
         {
             Assert.Throws(Is.TypeOf<ArgumentException>(), () => _uut.Power(x, exp));
         }
+
+        [Test]
+        public void Clear_ClearAccumulator_AccumulatorIsZero()
+        {
+            _uut.Clear();
+            Assert.That(_uut.Accumulator, Is.EqualTo(0));
+        }
     }
 }
